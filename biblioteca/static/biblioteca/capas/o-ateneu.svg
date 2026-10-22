@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="500" viewBox="0 0 360 500" role="img" aria-labelledby="title">
+  <title id="title">Capa ilustrada de O Ateneu</title>
+  <rect width="360" height="500" fill="#32354c"/>
+  <path d="M51 264V140h258v124M69 264V159h222v105M89 264v-63h182v63" fill="#796b66" stroke="#ddc392" stroke-width="4"/>
+  <path d="M35 140h290l-145-58z" fill="#b48d61"/>
+  <path d="M111 264v-48h43v48m52 0v-48h43v48" fill="#30394a" stroke="#ddc392" stroke-width="3"/>
+  <path d="M180 92v-22m-55 70v-17m110 17v-17" stroke="#f1dfba" stroke-width="3"/>
+  <text x="180" y="344" text-anchor="middle" fill="#fff6e5" font-family="Georgia,serif" font-size="43" font-weight="bold">O ATENEU</text>
+  <text x="180" y="404" text-anchor="middle" fill="#ddc392" font-family="Arial,sans-serif" font-size="15" letter-spacing="3">RAUL POMPEIA</text>
+</svg>

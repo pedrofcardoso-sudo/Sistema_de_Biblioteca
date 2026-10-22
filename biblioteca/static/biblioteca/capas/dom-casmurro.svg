@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="500" viewBox="0 0 360 500" role="img" aria-labelledby="title">
+  <title id="title">Capa ilustrada de Dom Casmurro</title>
+  <rect width="360" height="500" fill="#17324d"/>
+  <rect x="18" y="18" width="324" height="464" rx="8" fill="none" stroke="#d9b56d" stroke-width="3"/>
+  <circle cx="180" cy="210" r="82" fill="#d9b56d" opacity=".18"/>
+  <path d="M115 210c30-70 100-70 130 0-30 70-100 70-130 0Z" fill="none" stroke="#e9d7aa" stroke-width="3"/>
+  <path d="M140 210h80M180 170v80" stroke="#e9d7aa" stroke-width="2" opacity=".8"/>
+  <text x="180" y="340" text-anchor="middle" fill="#fff8e7" font-family="Georgia,serif" font-size="31" font-weight="bold">DOM</text>
+  <text x="180" y="378" text-anchor="middle" fill="#fff8e7" font-family="Georgia,serif" font-size="31" font-weight="bold">CASMURRO</text>
+  <text x="180" y="426" text-anchor="middle" fill="#d9b56d" font-family="Arial,sans-serif" font-size="15" letter-spacing="3">MACHADO DE ASSIS</text>
+</svg>

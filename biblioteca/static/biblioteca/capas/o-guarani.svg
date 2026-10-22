@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="500" viewBox="0 0 360 500" role="img" aria-labelledby="title">
+  <title id="title">Capa ilustrada de O Guarani</title>
+  <rect width="360" height="500" fill="#183d36"/>
+  <path d="M0 245 85 110l57 83 58-119 104 171 56-67v322H0Z" fill="#35634a"/>
+  <path d="M0 310c82-40 175-38 360 0v190H0Z" fill="#244a40"/>
+  <path d="M180 195c-16-29-37-13-30 8 7 19 25 29 30 34 5-5 23-15 30-34 7-21-14-37-30-8Z" fill="#dfbd74"/>
+  <path d="M180 243v26m-21-18 21 13 21-13" fill="none" stroke="#dfbd74" stroke-width="3"/>
+  <text x="180" y="355" text-anchor="middle" fill="#fff5dc" font-family="Georgia,serif" font-size="43" font-weight="bold">O GUARANI</text>
+  <text x="180" y="408" text-anchor="middle" fill="#dfbd74" font-family="Arial,sans-serif" font-size="16" letter-spacing="3">JOSÉ DE ALENCAR</text>
+</svg>

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="500" viewBox="0 0 360 500" role="img" aria-labelledby="title">
+  <title id="title">Capa ilustrada de O Cortiço</title>
+  <rect width="360" height="500" fill="#28453e"/>
+  <rect y="270" width="360" height="230" fill="#b86a43"/>
+  <path d="M45 270v-82h54v82m12 0v-112h62v112m13 0v-91h52v91m12 0v-123h65v123" fill="#e7c68d" stroke="#28453e" stroke-width="5"/>
+  <path d="M55 212h15m16 0h8m-4-28h15m32 19h16m18 0h14m23 25h17m25-48h20m17 27h10" stroke="#a84e36" stroke-width="9"/>
+  <circle cx="87" cy="118" r="42" fill="#e4a35c" opacity=".8"/>
+  <text x="180" y="354" text-anchor="middle" fill="#fff2d6" font-family="Georgia,serif" font-size="38" font-weight="bold">O CORTIÇO</text>
+  <text x="180" y="408" text-anchor="middle" fill="#fff2d6" font-family="Arial,sans-serif" font-size="16" letter-spacing="3">ALUÍSIO AZEVEDO</text>
+</svg>

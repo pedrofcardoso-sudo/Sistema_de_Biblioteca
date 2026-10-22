@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="500" viewBox="0 0 360 500" role="img" aria-labelledby="title">
+  <title id="title">Capa ilustrada de A Moreninha</title>
+  <rect width="360" height="500" fill="#f1d8ca"/>
+  <circle cx="180" cy="195" r="115" fill="#d88978" opacity=".65"/>
+  <path d="M0 295c73-50 116-46 180 0 65-46 111-50 180 0v205H0Z" fill="#50766b"/>
+  <path d="M110 188c0-42 31-69 70-69s70 27 70 69v30H110Z" fill="#443332"/>
+  <ellipse cx="180" cy="197" rx="46" ry="58" fill="#e5b08b"/>
+  <path d="M133 191c8-53 87-74 99-2-22-16-60-19-99 2Z" fill="#443332"/>
+  <path d="M159 203h8m26 0h8m-22 21h5" stroke="#443332" stroke-width="3" stroke-linecap="round"/>
+  <text x="180" y="354" text-anchor="middle" fill="#fff9ed" font-family="Georgia,serif" font-size="40" font-weight="bold">A MORENINHA</text>
+  <text x="180" y="408" text-anchor="middle" fill="#f1d8ca" font-family="Arial,sans-serif" font-size="15" letter-spacing="2">J. M. DE MACEDO</text>
+</svg>

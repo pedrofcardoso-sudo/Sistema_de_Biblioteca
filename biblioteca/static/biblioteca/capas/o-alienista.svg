@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="500" viewBox="0 0 360 500" role="img" aria-labelledby="title">
+  <title id="title">Capa ilustrada de O Alienista</title>
+  <rect width="360" height="500" fill="#243b55"/>
+  <circle cx="180" cy="190" r="105" fill="#e4bb78" opacity=".18"/>
+  <path d="M95 253V142h170v111M115 253v-89h130v89M145 253v-49h70v49" fill="none" stroke="#e4bb78" stroke-width="4"/>
+  <path d="M180 118v-37m-18 18h36" stroke="#f1dfba" stroke-width="3"/>
+  <circle cx="180" cy="119" r="8" fill="#e4bb78"/>
+  <text x="180" y="337" text-anchor="middle" fill="#fff7e7" font-family="Georgia,serif" font-size="41" font-weight="bold">O ALIENISTA</text>
+  <text x="180" y="397" text-anchor="middle" fill="#e4bb78" font-family="Arial,sans-serif" font-size="15" letter-spacing="3">MACHADO DE ASSIS</text>
+</svg>

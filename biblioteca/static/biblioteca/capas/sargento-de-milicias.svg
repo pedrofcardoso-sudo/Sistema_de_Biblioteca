@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="500" viewBox="0 0 360 500" role="img" aria-labelledby="title">
+  <title id="title">Capa ilustrada de Memórias de um Sargento de Milícias</title>
+  <rect width="360" height="500" fill="#e7d7b8"/>
+  <path d="M0 275h360v225H0z" fill="#6e4937"/>
+  <path d="M50 275V175h260v100M72 275V194h216v81" fill="#dbb979" stroke="#4d473d" stroke-width="4"/>
+  <path d="M115 275v-57h43v57m46 0v-57h43v57" fill="#486052"/>
+  <path d="M0 332c70-36 118-36 180 0 66-37 123-35 180 0" fill="none" stroke="#8fa28a" stroke-width="15"/>
+  <circle cx="180" cy="126" r="28" fill="#d8a959"/>
+  <path d="M142 211v-32c0-25 17-42 38-42s38 17 38 42v32l-20 17h-36z" fill="#354d48"/>
+  <text x="180" y="346" text-anchor="middle" fill="#fff4de" font-family="Georgia,serif" font-size="22" font-weight="bold">SARGENTO DE</text>
+  <text x="180" y="377" text-anchor="middle" fill="#fff4de" font-family="Georgia,serif" font-size="22" font-weight="bold">MILÍCIAS</text>
+  <text x="180" y="425" text-anchor="middle" fill="#e5ca91" font-family="Arial,sans-serif" font-size="14" letter-spacing="2">MANUEL A. DE ALMEIDA</text>
+</svg>

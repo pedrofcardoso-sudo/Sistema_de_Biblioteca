@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="500" viewBox="0 0 360 500" role="img" aria-labelledby="title">
+  <title id="title">Capa ilustrada de Memórias Póstumas de Brás Cubas</title>
+  <rect width="360" height="500" fill="#432b39"/>
+  <path d="M0 0h360v500H0z" fill="#7c4353" opacity=".5"/>
+  <path d="M45 225c35-100 235-100 270 0M68 245c29-73 195-73 224 0" fill="none" stroke="#e7b989" stroke-width="2"/>
+  <circle cx="180" cy="190" r="62" fill="#e7b989" opacity=".18"/>
+  <path d="M180 135v110m-26-82 52 54m0-54-52 54" stroke="#f3d7b2" stroke-width="3"/>
+  <text x="180" y="320" text-anchor="middle" fill="#fff4e8" font-family="Georgia,serif" font-size="24" font-weight="bold">MEMÓRIAS</text>
+  <text x="180" y="352" text-anchor="middle" fill="#fff4e8" font-family="Georgia,serif" font-size="24" font-weight="bold">PÓSTUMAS</text>
+  <text x="180" y="388" text-anchor="middle" fill="#fff4e8" font-family="Georgia,serif" font-size="18">DE BRÁS CUBAS</text>
+  <text x="180" y="437" text-anchor="middle" fill="#e7b989" font-family="Arial,sans-serif" font-size="14" letter-spacing="3">MACHADO DE ASSIS</text>
+</svg>

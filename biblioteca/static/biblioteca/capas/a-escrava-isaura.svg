@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="500" viewBox="0 0 360 500" role="img" aria-labelledby="title">
+  <title id="title">Capa ilustrada de A Escrava Isaura</title>
+  <rect width="360" height="500" fill="#e8d5b7"/>
+  <path d="M0 245c50-83 94-73 145 0 54-94 106-93 165 0 20-28 36-39 50-42v297H0Z" fill="#536b51"/>
+  <circle cx="181" cy="178" r="80" fill="#c48b62"/>
+  <path d="M123 175c-3-79 113-117 132-9-17-26-38-43-65-48-23 25-42 43-67 57Z" fill="#402f2c"/>
+  <ellipse cx="181" cy="191" rx="43" ry="57" fill="#e5b999"/>
+  <path d="M154 193h9m39 0h9m-31 23h8" stroke="#63443b" stroke-width="3" stroke-linecap="round"/>
+  <path d="M75 270c60-33 144-33 210 0v18H75z" fill="#f1e1bf"/>
+  <text x="180" y="350" text-anchor="middle" fill="#fff8e9" font-family="Georgia,serif" font-size="28" font-weight="bold">A ESCRAVA</text>
+  <text x="180" y="383" text-anchor="middle" fill="#fff8e9" font-family="Georgia,serif" font-size="28" font-weight="bold">ISAURA</text>
+  <text x="180" y="429" text-anchor="middle" fill="#edcf93" font-family="Arial,sans-serif" font-size="15" letter-spacing="3">BERNARDO GUIMARÃES</text>
+</svg>

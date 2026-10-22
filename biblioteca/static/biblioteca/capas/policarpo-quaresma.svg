@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="500" viewBox="0 0 360 500" role="img" aria-labelledby="title">
+  <title id="title">Capa ilustrada de Triste Fim de Policarpo Quaresma</title>
+  <rect width="360" height="500" fill="#e8e0c9"/>
+  <path d="M0 285c66-37 119-38 180 0 68-40 121-35 180 0v215H0Z" fill="#355d4b"/>
+  <path d="M0 328c73-33 129-31 180 0 67-34 122-33 180 0v172H0Z" fill="#a24f3e"/>
+  <circle cx="182" cy="160" r="72" fill="#cfac69" opacity=".55"/>
+  <path d="M147 222c6-58 61-73 77-8l-12 21h-51z" fill="#293c35"/>
+  <path d="M145 231h83v31h-83z" fill="#d8c196"/>
+  <text x="180" y="330" text-anchor="middle" fill="#fff7e7" font-family="Georgia,serif" font-size="20" font-weight="bold">POLICARPO</text>
+  <text x="180" y="359" text-anchor="middle" fill="#fff7e7" font-family="Georgia,serif" font-size="20" font-weight="bold">QUARESMA</text>
+  <text x="180" y="408" text-anchor="middle" fill="#e8d4a5" font-family="Arial,sans-serif" font-size="15" letter-spacing="3">LIMA BARRETO</text>
+</svg>
