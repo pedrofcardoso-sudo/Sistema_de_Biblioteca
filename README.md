@@ -66,11 +66,11 @@ com SSL. Sem elas, usará o SQLite local.
 python manage.py migrate
 python manage.py seed_biblioteca
 python manage.py createsuperuser
-python manage.py runserver
+python manage.py runserver 127.0.0.1:8001
 ```
 
-Abra <http://127.0.0.1:8000/> para acessar o acervo e
-<http://127.0.0.1:8000/admin/> para cadastrar autores, livros e membros.
+Abra <http://127.0.0.1:8001/> para acessar o acervo e
+<http://127.0.0.1:8001/admin/> para cadastrar autores, livros e membros.
 O comando `seed_biblioteca` cadastra dez livros de exemplo, cada um com dez
 cópias totais, preços em reais, capas SVG locais, autores e seis membros. O
 estoque disponível é ajustado para descontar os empréstimos ativos, então um
