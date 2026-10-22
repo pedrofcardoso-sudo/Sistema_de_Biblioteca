@@ -1,0 +1,46 @@
+{% extends 'biblioteca/base.html' %}
+{% load static %}
+
+{% block titulo %}Relatório | Biblioteca IESB{% endblock %}
+
+{% block conteudo %}
+<section class="page-heading">
+    <span class="eyebrow">OS FAVORITOS DOS LEITORES</span>
+    <h1>Livros mais emprestados</h1>
+    <p>Descubra quais histórias estão conquistando nossa comunidade.</p>
+</section>
+<section class="table-card">
+    <div class="table-scroll">
+    <table class="data-table ranking-table">
+        <thead>
+            <tr>
+                <th>Posição</th>
+                <th>Capa</th>
+                <th>Título e autor</th>
+                <th>Preço</th>
+                <th>Empréstimos</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for livro in livros %}
+        <tr>
+            <td><span class="rank-number">{{ forloop.counter|stringformat:"02d" }}</span></td>
+            <td>
+                {% if livro.capa %}
+                <img class="rank-cover" src="{% static livro.capa %}" alt="Capa de {{ livro.titulo }}" width="54" height="76" loading="lazy">
+                {% else %}
+                Sem capa
+                {% endif %}
+            </td>
+            <td><strong>{{ livro.titulo }}</strong><span class="table-subtitle">{{ livro.autor.nome }}</span></td>
+            <td>R$ {{ livro.preco|floatformat:2 }}</td>
+            <td><span class="loan-count">{{ livro.total_emprestimos }}</span></td>
+        </tr>
+        {% empty %}
+        <tr><td colspan="5" class="empty-table">Ainda não há livros para exibir.</td></tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    </div>
+</section>
+{% endblock %}

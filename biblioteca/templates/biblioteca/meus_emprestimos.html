@@ -1,0 +1,71 @@
+{% extends 'biblioteca/base.html' %}
+
+{% block titulo %}Empréstimos de {{ membro.nome }} | Biblioteca IESB{% endblock %}
+
+{% block conteudo %}
+<section class="page-heading">
+    <a class="back-link" href="{% url 'lista_livros' %}">← Voltar ao acervo</a>
+    <span class="eyebrow">ÁREA DO LEITOR</span>
+    <h1>Empréstimos de {{ membro.nome }}</h1>
+    <p>Acompanhe os prazos e devolva os livros quando terminar a leitura.</p>
+</section>
+<section class="table-card">
+    <div class="table-scroll">
+    <table class="data-table">
+        <thead>
+            <tr>
+                <th>Livro</th>
+                <th>Data de devolução</th>
+                <th>Multa atual</th>
+                <th>Situação</th>
+                <th>Ação</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for emprestimo in emprestimos %}
+        <tr>
+            <td><strong>{{ emprestimo.livro.titulo }}</strong></td>
+            <td>{{ emprestimo.data_prevista_devolucao|date:"d/m/Y" }}</td>
+            <td>
+                {% if emprestimo.multa %}
+                    <span class="fine-value">R$ {{ emprestimo.multa|floatformat:2 }}</span>
+                    <span class="table-subtitle">{{ emprestimo.dias_atraso }} dia{{ emprestimo.dias_atraso|pluralize }} de atraso</span>
+                {% else %}
+                    <span class="muted">R$ 0,00</span>
+                {% endif %}
+            </td>
+            <td>
+                {% if emprestimo.esta_atrasado %}
+                    <span class="badge badge-late"><span class="badge-dot"></span>Atrasado</span>
+                {% elif emprestimo.status == 'DEVOLVIDO' %}
+                    <span class="badge badge-returned"><span class="badge-dot"></span>Devolvido</span>
+                {% else %}
+                    <span class="badge badge-active"><span class="badge-dot"></span>Em andamento</span>
+                {% endif %}
+            </td>
+            <td>
+                {% if emprestimo.status != 'DEVOLVIDO' %}
+                <form method="post" action="{% url 'devolver_livro' emprestimo.id %}">
+                    {% csrf_token %}
+                    <button class="button button-outline" type="submit">Registrar devolução</button>
+                </form>
+                {% else %}
+                <span class="muted">Concluído</span>
+                {% endif %}
+            </td>
+        </tr>
+        {% empty %}
+        <tr><td colspan="5" class="empty-table">Este membro ainda não tem empréstimos.</td></tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    </div>
+    {% if emprestimos %}
+    <div class="fine-summary">
+        <span>Multa acumulada até hoje</span>
+        <strong>R$ {{ total_multa|floatformat:2 }}</strong>
+    </div>
+    {% endif %}
+</section>
+<p class="fine-note">A multa é de R$ 2,00 por dia após a data prevista de devolução. O valor considera a data de hoje para livros ainda não devolvidos.</p>
+{% endblock %}

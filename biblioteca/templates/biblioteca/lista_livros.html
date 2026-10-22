@@ -1,0 +1,93 @@
+{% extends 'biblioteca/base.html' %}
+{% load static %}
+
+{% block titulo %}Acervo | Biblioteca IESB{% endblock %}
+
+{% block conteudo %}
+<section class="hero">
+    <div class="hero-copy">
+        <span class="eyebrow">LEITURA QUE APROXIMA</span>
+        <h1>Um bom livro abre novos caminhos.</h1>
+        <p>Explore nosso acervo, descubra seu próximo livro favorito e faça seu empréstimo.</p>
+        <a class="button button-light" href="#acervo">Explorar o acervo <span aria-hidden="true">↓</span></a>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+        <span class="hero-spark hero-spark-one">✦</span>
+        <span class="hero-spark hero-spark-two">✳</span>
+        <div class="hero-book hero-book-back"></div>
+        <div class="hero-book hero-book-front"><span>IDEIAS<br>SEM FIM</span></div>
+    </div>
+</section>
+
+<section class="section-block" id="acervo">
+    <div class="section-heading">
+        <div>
+            <span class="eyebrow">ESCOLHA SUA PRÓXIMA LEITURA</span>
+            <h2>Nosso acervo</h2>
+        </div>
+        <span class="section-note">{{ livros|length }} livro{{ livros|length|pluralize }}</span>
+    </div>
+    <div class="book-grid">
+        {% for livro in livros %}
+        <article class="book-card">
+            <div class="book-cover-wrap">
+                {% if livro.capa %}
+                <img class="book-cover" src="{% static livro.capa %}" alt="Capa de {{ livro.titulo }}" width="360" height="500" loading="lazy">
+                {% else %}
+                <div class="book-cover-placeholder" aria-label="Capa não cadastrada">📚</div>
+                {% endif %}
+                {% if livro.copias_disponiveis %}
+                <span class="stock-badge available">Disponível</span>
+                {% else %}
+                <span class="stock-badge unavailable">Indisponível</span>
+                {% endif %}
+            </div>
+            <div class="book-details">
+                <p class="book-author">{{ livro.autor.nome }}</p>
+                <h3>{{ livro.titulo }}</h3>
+                <div class="book-meta">
+                    <span class="book-price">R$ {{ livro.preco|floatformat:2 }}</span>
+                    <span class="book-stock">{{ livro.copias_disponiveis }} de {{ livro.copias_totais }} cópias</span>
+                </div>
+                <form class="loan-form" method="post" action="{% url 'emprestar_livro' livro.id %}">
+                    {% csrf_token %}
+                    <select name="membro_id" aria-label="Membro para {{ livro.titulo }}" required>
+                        <option value="">Selecione um membro</option>
+                        {% for membro in membros %}
+                        <option value="{{ membro.id }}">{{ membro.nome }}</option>
+                        {% endfor %}
+                    </select>
+                    <button class="button button-primary" type="submit" {% if not membros or not livro.copias_disponiveis %}disabled{% endif %}>
+                        Emprestar livro
+                    </button>
+                </form>
+            </div>
+        </article>
+        {% empty %}
+        <div class="empty-state">
+            <span class="empty-icon" aria-hidden="true">📚</span>
+            <h3>O acervo está esperando por você</h3>
+            <p>Nenhum livro cadastrado. Use a administração para adicionar os primeiros livros.</p>
+            <a class="button button-primary" href="{% url 'admin:biblioteca_livro_add' %}">Cadastrar um livro</a>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+
+<section class="members-section">
+    <div>
+        <span class="eyebrow">ÁREA DO LEITOR</span>
+        <h2>Seus empréstimos</h2>
+        <p>Consulte os livros emprestados e registre as devoluções.</p>
+    </div>
+{% if membros %}
+<ul class="member-list">
+    {% for membro in membros %}
+    <li><a class="member-link" href="{% url 'meus_emprestimos' membro.id %}"><span class="member-avatar" aria-hidden="true">{{ membro.nome|first|upper }}</span><span>{{ membro.nome }}</span><span class="member-arrow" aria-hidden="true">→</span></a></li>
+    {% endfor %}
+</ul>
+{% else %}
+<p class="empty-copy">Nenhum membro cadastrado. Cadastre membros pela administração.</p>
+{% endif %}
+</section>
+{% endblock %}

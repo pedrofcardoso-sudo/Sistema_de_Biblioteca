@@ -1,0 +1,79 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block titulo %}Biblioteca IESB{% endblock %}</title>
+    <meta name="theme-color" content="#19352f">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='85'%3E%F0%9F%93%9A%3C/text%3E%3C/svg%3E">
+    <script>
+        try {
+            const savedTheme = localStorage.getItem("biblioteca-tema");
+            if (["claro", "escuro", "sepia"].includes(savedTheme)) {
+                document.documentElement.dataset.theme = savedTheme;
+            }
+        } catch {
+            document.documentElement.dataset.theme = "claro";
+        }
+    </script>
+    <link rel="stylesheet" href="{% static 'biblioteca/css/style.css' %}">
+</head>
+<body>
+    <div id="loading-overlay" class="loading-overlay hidden" aria-hidden="true">
+        <span class="spinner" aria-hidden="true"></span>
+        <p>Atualizando a biblioteca...</p>
+    </div>
+
+    <header class="site-header">
+        <div class="container header-content">
+            <a class="brand" href="{% url 'lista_livros' %}">
+                <span class="brand-icon" aria-hidden="true">B</span>
+                <span>Biblioteca <strong>IESB</strong></span>
+            </a>
+            <div class="header-actions">
+                <nav class="main-nav" aria-label="Navegação principal">
+                    <a href="{% url 'lista_livros' %}">
+                        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v16H6.5A2.5 2.5 0 0 0 4 21.5z"/><path d="M4 5.5v16M8 7h8M8 11h8"/></svg>
+                        Acervo
+                    </a>
+                    <a href="{% url 'relatorio_livros' %}">
+                        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19V5m0 14h17M8 15l4-4 3 2 5-6"/></svg>
+                        Mais emprestados
+                    </a>
+                    <a href="{% url 'admin:index' %}">
+                        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="m19.4 15 .1.1 1.4 1.1-1.4 2.4-1.7-.7a8 8 0 0 1-1.8 1l-.3 1.8h-2.8l-.3-1.8a8 8 0 0 1-1.8-1l-1.7.7-1.4-2.4 1.4-1.1a8 8 0 0 1 0-2l-1.4-1.1 1.4-2.4 1.7.7a8 8 0 0 1 1.8-1l.3-1.8h2.8l.3 1.8a8 8 0 0 1 1.8 1l1.7-.7 1.4 2.4-1.4 1.1a8 8 0 0 1 0 2Z"/></svg>
+                        Administração
+                    </a>
+                </nav>
+                <label class="theme-picker" for="theme-select">
+                    <svg class="icon theme-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></svg>
+                    <span class="theme-label">Tema</span>
+                    <select id="theme-select" aria-label="Escolher tema da página">
+                        <option value="claro">Claro</option>
+                        <option value="escuro">Escuro</option>
+                        <option value="sepia">Sépia</option>
+                    </select>
+                </label>
+            </div>
+        </div>
+    </header>
+
+    <main class="container page-content">
+        {% if messages %}
+        <section class="messages" aria-live="polite">
+            {% for message in messages %}
+                <div class="alert alert-{{ message.tags }}" role="status">{{ message }}</div>
+            {% endfor %}
+        </section>
+        {% endif %}
+        {% block conteudo %}{% endblock %}
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 Biblioteca IESB <span aria-hidden="true">·</span> Projeto didático</p>
+    </footer>
+    <script src="{% static 'biblioteca/js/loading.js' %}" defer></script>
+    <script src="{% static 'biblioteca/js/theme.js' %}" defer></script>
+</body>
+</html>
